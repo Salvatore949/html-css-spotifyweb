@@ -34,7 +34,7 @@ header button{
 #container{
     display: flex;
     background-color: #141922;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 200px);
 }
 
 main{
@@ -59,12 +59,16 @@ aside li{
 
 aside a{
     list-style-type: none;
-    
 }
 
 aside i{
     font-size: 20px;
     padding-right: 5px;
+}
+
+h5{
+    color:white;
+    margin:0px 20px;
 }
 
 li:nth-child(5){
@@ -101,10 +105,17 @@ nav li{
 /* titoli h2 */
 
 h2{
-    padding:30px 35px;
+    padding:30px 40px 0px;
     color: white;
 }
 
+#first_h2{
+    padding-bottom: 30px;
+}
+
+h5{
+    padding: 20px 20px;
+}
 /*row lines */
 
 .row{
@@ -121,7 +132,49 @@ h2{
     padding: 5px;
 }
 
+/*player*/
 
+#player{
+    display: flex;
+    justify-content: space-between;
+    background-color: #282828;
+    color: white;
+    align-items: center;
+    padding: 15px;
+    height: 100px;
+}
+
+#left{
+    display:flex;
+    align-items: center;
+}
+
+#left img{
+   width:60px;
+   margin-right:10px;
+}
+
+.hearth{
+    padding:0px 20px 0px 40px;
+}
+
+#center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#center i{
+    padding: 15px 15px;
+}
+
+#right{
+    padding:10px;
+}
+
+#right i{
+    padding:0 20px 20px;
+
+}
 
 
 

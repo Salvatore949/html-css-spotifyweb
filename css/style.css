@@ -17,7 +17,7 @@ header{
 
 header img{
     width:150px;
-    margin: 15px;
+    
 }
 
 header button{
@@ -38,7 +38,7 @@ header button{
 }
 
 main{
-    width:100%;
+    max-width:100%;
     overflow-y:auto;
 }
 
@@ -47,7 +47,8 @@ aside{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width:15%;
+    padding-left: 0px; 
+    padding-right:45px;
     height: 100%;
     color:antiquewhite;
 }
@@ -55,9 +56,6 @@ aside{
 aside li{
     padding:8px 20px;
     font-size: 15px;
-}
-
-aside a{
     list-style-type: none;
 }
 
@@ -78,6 +76,7 @@ li:nth-child(5){
 
 #last_ul li{
     list-style-type: none;
+    font-size: 10px;    
 }
 
 
@@ -126,11 +125,29 @@ h5{
 }
 
 /*img row*/
-.row img{
-    width: 195px;
-    height: 240px;
-    padding: 5px;
+.first div{
+    display: flex;
+    flex-direction: column;
+    width:calc(100% / 6);
+    padding:10px ;
 }
+
+.second div{
+    width:calc(100% / 6  - 18px);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-left: 10px;  
+}
+
+.third img{
+    width:calc(100% / 6  - 18px);
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
 
 /*player*/
 
@@ -159,9 +176,8 @@ h5{
 }
 
 #center {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    text-align: center;
+    margin-right: 40px;
 }
 #center i{
     padding: 15px 15px;
@@ -172,10 +188,69 @@ h5{
 }
 
 #right i{
-    padding:0 20px 20px;
+    padding:0 10px;
 
 }
 
+/*responsive 552x1095*/
+@media all and (max-width:552px){
+
+    aside{
+        padding-right: 0px;
+    }
+
+    #last_ul, li:nth-child(n+4){
+        display: none;
+
+    }
+   
+    .first{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .first div{
+            width:calc(100% / 2 );
+    }  
+    
+}
+/*responsive 639x1095*/
+@media all and (min-width:553px) and (max-width:639px) {
+    .first{
+        display: flex;
+        flex-wrap: wrap;
+        }
+    
+    .first div{
+            width:calc(100% / 2 );
+        }  
+
+        #left, #center, #right{
+        }
+    }
+/*responsive 878x1095*/
+@media all and (max-width:878px) and (min-width:640px){
+
+    .nav{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .first{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .first div{
+        width:calc(100% / 4);
+    }
+    .second div{
+        width:22%;
+    }
+    .third img{
+        width:22%;
+        margin-left: 15px;
+    }
 
 
+}
 
